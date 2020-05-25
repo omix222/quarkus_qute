@@ -1,0 +1,15 @@
+{@com.example.Item item}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{item.name}</title>
+</head>
+<body>
+<h1>{item.name}</h1>
+<div>Price: {item.price}</div>
+{#if item.price > 100}
+<div>Discounted Price: {item.price}</div>
+{/if}
+</body>
+</html>
