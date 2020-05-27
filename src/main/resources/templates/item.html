@@ -7,9 +7,12 @@
 </head>
 <body>
 <h1>{item.name}</h1>
-<div>Price: {item.price}</div>
 {#if item.price > 100}
+<div>Price: {item.price}</div>
+{/if}
+{#if item.price <= 100}
 <div>Discounted Price: {item.price}</div>
 {/if}
+
 </body>
 </html>

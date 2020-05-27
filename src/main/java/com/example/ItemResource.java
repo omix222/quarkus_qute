@@ -28,7 +28,10 @@ public class ItemResource {
     @Path("{id}")
     @Produces(MediaType.TEXT_HTML)
     public String get(@PathParam("id") Integer id) {
-        return item.data("item", new Item(String.valueOf(id), BigDecimal.valueOf(100))).render();
+        if (id.equals(Integer.valueOf(1))) {
+            return item.data("item", new Item(String.valueOf(id), BigDecimal.valueOf(10))).render();
+        }
+        return item.data("item", new Item(String.valueOf(id), BigDecimal.valueOf(200))).render();
     }
 
 }
